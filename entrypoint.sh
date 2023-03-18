@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker_run="docker run"
+docker_run="docker start mysql_container ||docker run --name mysql_container"
 
 if [ -n "$INPUT_MYSQL_ROOT_PASSWORD" ]; then
   echo "Root password not empty, use root superuser"
